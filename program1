@@ -96,3 +96,23 @@ int main()
 	scanf("%d",&num);
 	check(head,num);
 }
+//method 2
+// Instead of check function of above program, we can use below check function
+//To check if an element is present in the list or not.
+void check(struct Node *head,int data)
+{
+    struct Node *temp = head;
+    while(temp!=NULL)
+    {
+    	if(temp->data == data)
+    	{
+    		printf("Yes");
+    		break;
+		}
+		temp = temp->next;
+	}
+	if(temp==NULL)
+	{
+		printf("No");
+	}
+}
